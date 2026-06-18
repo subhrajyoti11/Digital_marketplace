@@ -1,13 +1,14 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const Hero = () => {
 
     const [input, setInput] = React.useState('')
-    const [menuOpen, setMenuOpen] = React.useState(false)
+    const navigate  = useNavigate()
 
     const onSubmitHandler = (e) => {
         e.preventDefault()
-
+        navigate(`/marketplace?search=${input}`)
     }
   return (
          <>
